@@ -41,7 +41,7 @@ Legend:
 
 ## Documented consistency
 
-* [Amazon S3](http://aws.amazon.com/s3/faqs/#What_data_consistency_model_does_Amazon_S3_employ) - buckets in the US Standard region provide eventual consistency.  Buckets in all other regions provide read-after-write consistency for PUTs of new objects and eventual consistency for overwrite PUTs and DELETEs.
+* [Amazon S3](http://aws.amazon.com/s3/faqs/#What_data_consistency_model_does_Amazon_S3_employ) - buckets in all Regions provide read-after-write consistency for PUTS of new objects and eventual consistency for overwrite PUTS and DELETES. 
 * [Ceph](http://ceph.com/papers/weil-rados-pdsw07.pdf) - provides well-defined safety semantics and strong consistency guarantees.
 * [Google Cloud Storage](https://cloud.google.com/storage/docs/concepts-techniques#consistency) - provides strong global consistency for all read-after-write, read-after-update, and read-after-delete operations, including both data and metadata.  List operations are eventually consistent.
 * [Microsoft Azure Storage](http://azure.microsoft.com/blog/2014/09/08/managing-concurrency-in-microsoft-azure-storage-2/) - was designed to embrace a strong consistency model which guarantees that when the Storage service commits a data insert or update operation all further accesses to that data will see the latest update.
